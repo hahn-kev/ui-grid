@@ -86,6 +86,8 @@ describe('ui.grid.exporter uiGridExporterService', function () {
         exporterPdfCustomFormatter: jasmine.any(Function),
         exporterHeaderFilterUseName: false,
         exporterMenuAllData: true,
+        exporterMenuVisibleData: true,
+        exporterMenuSelectedData: true,
         exporterMenuCsv: true,
         exporterMenuPdf: true,
         exporterFieldCallback: jasmine.any(Function),
@@ -114,6 +116,8 @@ describe('ui.grid.exporter uiGridExporterService', function () {
         exporterPdfCustomFormatter: callback,
         exporterHeaderFilterUseName: true,
         exporterMenuAllData: false,
+        exporterMenuVisibleData: false,
+        exporterMenuSelectedData: false,
         exporterMenuCsv: false,
         exporterMenuPdf: false,
         exporterFieldCallback: callback,
@@ -139,6 +143,8 @@ describe('ui.grid.exporter uiGridExporterService', function () {
         exporterPdfCustomFormatter: callback,
         exporterHeaderFilterUseName: true,
         exporterMenuAllData: false,
+        exporterMenuVisibleData: false,
+        exporterMenuSelectedData: false,
         exporterMenuCsv: false,
         exporterMenuPdf: false,
         exporterFieldCallback: callback,
@@ -284,7 +290,7 @@ describe('ui.grid.exporter uiGridExporterService', function () {
       var separator = ',';
 
       expect(uiGridExporterService.formatAsCsv(columnHeaders, data, separator)).toEqual(
-        "\n"
+        ""
       );
     });
 
